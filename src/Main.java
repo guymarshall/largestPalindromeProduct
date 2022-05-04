@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static String reverseString(String input) {
         return new StringBuilder(input).reverse().toString();
@@ -8,12 +10,22 @@ public class Main {
         return numberAsString.equals(reversedNumberCharacters);
     }
     public static void main(String[] args) {
-        /*
-        A palindromic number reads the same both ways.
-        The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
-        Find the largest palindrome made from the product of two 3-digit numbers.
-        */
-        System.out.println(isPalindrome(999));
-        System.out.println(isPalindrome(988));
+        System.out.print("Enter a number of digits: ");
+        Scanner scanner = new Scanner(System.in);
+        int userInput = scanner.nextInt();
+        int maxNumber = (int)Math.pow(10, userInput) - 1;
+        int largestPalindrome = 0;
+        int product = 1;
+
+        for (int i = 0; i <= maxNumber; i++) {
+            for (int j = 0; j <= maxNumber; j++) {
+                product = i * j;
+                if (isPalindrome(product) && product > largestPalindrome) {
+                    largestPalindrome = product;
+                }
+            }
+        }
+
+        System.out.printf("Maximum palindrome product for %d digits is %d.", userInput, largestPalindrome);
     }
 }
