@@ -2,13 +2,25 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
+    static StringBuilder stringBuilderReverse = new StringBuilder();
+    static StringBuilder stringBuilder = new StringBuilder();
+
     public static String reverseString(String input) {
         return new StringBuilder(input).reverse().toString();
     }
     public static boolean isPalindrome(int number) {
         String numberAsString = String.valueOf(number);
-        String reversedNumberCharacters = reverseString(numberAsString);
-        return numberAsString.equals(reversedNumberCharacters);
+
+        stringBuilder.setLength(0);
+        stringBuilderReverse.setLength(0);
+        stringBuilder.append(numberAsString);
+        stringBuilderReverse.append(numberAsString);
+        stringBuilderReverse.reverse();
+
+        return stringBuilderReverse.compareTo(stringBuilder) == 0;
+
+//        String reversedNumberCharacters = reverseString(numberAsString);
+//        return numberAsString.equals(reversedNumberCharacters);
     }
     public static void main(String[] args) {
         System.out.print("Enter a number of digits: ");
@@ -18,8 +30,8 @@ public class Main {
         int largestPalindrome = 0;
         int product = 1;
 
-        for (int i = 0; i <= maxNumber; i++) {
-            for (int j = 0; j <= maxNumber; j++) {
+        for (int i = 1; i <= maxNumber; i++) {
+            for (int j = 1; j <= maxNumber; j++) {
                 product = i * j;
                 if (isPalindrome(product) && product > largestPalindrome) {
                     largestPalindrome = product;

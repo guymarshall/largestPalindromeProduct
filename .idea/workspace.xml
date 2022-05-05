@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ce71755b-b3bd-416f-b4db-90010f07619c" name="Changes" comment="Workspace changed">
+    <list default="true" id="ce71755b-b3bd-416f-b4db-90010f07619c" name="Changes" comment="Add second version - takes up too much memory">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -86,7 +86,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651770718205</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add second version - takes up too much memory">
+      <created>1651776174125</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1651776174125</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -106,6 +113,7 @@
     <MESSAGE value="Complete - tested with up to 4 digits. 5 digits runs out of RAM." />
     <MESSAGE value="Complete - tested with up to 5 digits." />
     <MESSAGE value="Workspace changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Workspace changed" />
+    <MESSAGE value="Add second version - takes up too much memory" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add second version - takes up too much memory" />
   </component>
 </project>
