@@ -1,13 +1,8 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
     static StringBuilder stringBuilderReverse = new StringBuilder();
     static StringBuilder stringBuilder = new StringBuilder();
-
-    public static String reverseString(String input) {
-        return new StringBuilder(input).reverse().toString();
-    }
     public static boolean isPalindrome(int number) {
         String numberAsString = String.valueOf(number);
 
@@ -25,7 +20,7 @@ public class Main {
         int userInput = scanner.nextInt();
         int maxNumber = (int)Math.pow(10, userInput) - 1;
         int largestPalindrome = 0;
-        int product = 1;
+        int product;
 
         for (int i = 1; i <= maxNumber; i++) {
             for (int j = 1; j <= maxNumber; j++) {
